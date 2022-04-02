@@ -6,4 +6,4 @@ Exists mostly in the proof-of-concept state as I don't want to work on it anymor
 - Native:
 `cargo make build-native`
 - WASM:
-`cargo make build-web`
+`cargo make build-web` (and use `index.html` to load the `.js` (with the `.wasm` in the same directory))
