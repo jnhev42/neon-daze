@@ -22,15 +22,9 @@ impl Plugin for ItemPlugin {
 }
 
 // manages all the players items
+#[derive(Default)]
 pub struct ItemManager {
     item_ids: Vec<ItemId>,
-}
-
-// gives an empty player items list
-impl Default for ItemManager {
-    fn default() -> Self {
-        Self { item_ids: vec![] }
-    }
 }
 
 impl ItemManager {

@@ -133,3 +133,9 @@ impl ConfigFlags {
         self.0.iter()
     }
 }
+
+impl Default for ConfigFlags {
+    fn default() -> Self {
+         Self::new()
+    }
+}

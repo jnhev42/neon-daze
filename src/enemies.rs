@@ -220,7 +220,6 @@ impl EnemyBundle {
                         CoefficientCombineRule::Min,
                     restitution_combine_rule:
                         CoefficientCombineRule::Min,
-                    ..Default::default()
                 },
                 flags: ColliderFlags {
                     collision_groups: phys::masks::enemy(),

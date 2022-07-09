@@ -254,7 +254,7 @@ impl GunBundle {
             cooldown,
             sprite: SpriteBundle {
                 sprite: Sprite::new(builder.size),
-                material: builder.material.clone(),
+                material: builder.material,
                 transform: Transform::from_translation(
                     Vec2::ZERO.extend(5.0),
                 ),

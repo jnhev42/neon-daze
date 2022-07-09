@@ -1,3 +1,4 @@
+#![allow(clippy::type_complexity)]
 // this imports most common types used
 // in a game made in the Bevy engine
 use bevy::prelude::*;

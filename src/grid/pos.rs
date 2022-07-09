@@ -166,7 +166,7 @@ impl GridPos {
                 grid::Grid::HEIGHT
             ),
         )
-        .unwrap_or(GridPos::new(0, 0))
+        .unwrap_or_else(|| GridPos::new(0, 0))
     }
 
     // generates a new random grid position

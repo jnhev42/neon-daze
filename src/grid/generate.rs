@@ -295,15 +295,16 @@ impl Grid {
             // from their starting position
             // double their cost as this enemy
             // will be attacking immediately
+            let filter = |tile: &Tile| {
+                matches!(
+                    tile.cont,
+                    TileContent::Empty(_)
+                )
+            };
             if self.line_of_sight(
                 self.player.unwrap(),
                 pos,
-                |tile| {
-                    matches!(
-                        tile.cont,
-                        TileContent::Empty(_)
-                    )
-                },
+                filter,
             ) {
                 cost *= 2.0;
             }
@@ -372,7 +373,7 @@ impl Grid {
             );
             // spawning enemies on the grid
             grid.add_enemies(rng, difficulty);
-            restart_if!(grid.enemies.len() == 0);
+            restart_if!(grid.enemies.is_empty());
             // all restart_if s passed so break out of
             // loop
             break;

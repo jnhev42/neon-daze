@@ -127,7 +127,7 @@ impl Player {
             // divided by the fraction the x and y
             // components represent but here they're
             // both always 1 so there 1/2
-            const NORMALIZE_FACTOR: f32 = 0.70710678118;
+            const NORMALIZE_FACTOR: f32 = 0.707_106_77;
             dir * NORMALIZE_FACTOR * player.speed
         };
         // adding the current velocity to the player's translation
@@ -223,7 +223,6 @@ impl PlayerBundle {
                         CoefficientCombineRule::Min,
                     restitution_combine_rule:
                         CoefficientCombineRule::Min,
-                    ..Default::default()
                 },
                 flags: ColliderFlags {
                     collision_groups: phys::masks::player(),

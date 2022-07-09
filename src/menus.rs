@@ -572,7 +572,7 @@ impl ItemMenu {
                             TextSection {
                                 value: item
                                     .name()
-                                    .to_string()
+                                    
                                     + "\n",
                                 style: TextStyle {
                                     font: materials
@@ -587,7 +587,7 @@ impl ItemMenu {
                             TextSection {
                                 value: item
                                     .desc()
-                                    .to_string(),
+                                    ,
                                 style: TextStyle {
                                     font: materials
                                         .main_font

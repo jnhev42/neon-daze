@@ -60,10 +60,7 @@ impl Cooldown {
     // creates a new (possibly null) cooldown
     // that lasts the specified number of seconds
     pub fn new(secs: Option<f32>) -> Self {
-        let timer = match secs {
-            Some(secs) => Some(Self::create_timer(secs)),
-            None => None,
-        };
+        let timer = secs.map(Self::create_timer);
         Self { timer }
     }
 
